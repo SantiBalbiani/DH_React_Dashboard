@@ -8,6 +8,15 @@ import Saludar from './components/Saludar';
 import Sidebar from './components/Sidebar';
 import Metric from './components/Metric';
 
+let DatosComponentes = [
+  {
+    Otro Json
+  },
+  {
+    Un Json
+  }
+]
+
 function App() {
   return (
     
@@ -78,16 +87,24 @@ function App() {
 					<div class="row">
 
  
+    {/* Componente React */}
+
+    {
+      data.map(function(unDato, i){
+
+     return(
 
     <Metric
     soyElKpo = {true}
-    title = "Mi Super Titulo"
+    title = {unDato.title}
     edad = {35}
     border = "border-left-primary"
     icon = "fa-clipboard-list"
-    value = {135}
+    value = {unDato.value}
     />
-
+     )
+ })
+    }
 
 						
 						<div class="col-md-4 mb-4">
